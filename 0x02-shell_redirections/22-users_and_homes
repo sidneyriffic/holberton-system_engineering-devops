@@ -1,0 +1,2 @@
+#!/bin/bash
+cat /etc/passwd | cut -f 2-6 -d : --complement
