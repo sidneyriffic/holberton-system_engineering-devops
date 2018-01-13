@@ -1,2 +1,2 @@
 #!/bin/bash
-sort -k 7nr | head -11 | cut -f 1
+sort -k 7nr | head -11 | cut -f 1,7
