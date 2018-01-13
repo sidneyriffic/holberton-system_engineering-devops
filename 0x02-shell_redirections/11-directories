@@ -1,2 +1,2 @@
 #!/bin/bash
-find * \( -name "*" -o -name ".*" \) -type d | grep -c ""
+find ~ \( -name "*" -o -name ".*" \) -type d #| grep -c ""
