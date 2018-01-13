@@ -1,2 +1,2 @@
 #!/bin/bash
-find ~ \( -name "*" -o -name ".*" \) -type d #| grep -c ""
+find . -mindepth 1 -type d | wc -l
