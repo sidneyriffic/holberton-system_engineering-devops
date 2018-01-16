@@ -1,0 +1,2 @@
+#!/bin/bash
+$(printf "%x" $(($(echo $water#$WATER)+$(echo $stir#$STIR))))
