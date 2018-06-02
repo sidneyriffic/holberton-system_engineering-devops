@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #output a squence of numbers resembling a clock counter
 hour=0
-while [ $hour -lt 24 ]; do
+while [ $hour -lt 12 ]; do
     echo Hour: $hour
     minute=0
     while [ $minute -lt 60 ]; do
