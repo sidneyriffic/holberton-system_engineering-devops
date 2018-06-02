@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #output files in directory with name text after first dash only
 for file in *; do
-    echo $file | cut -f 2- -d '-'
+    echo "$file" | cut -sf 2- -d '-'
 done
