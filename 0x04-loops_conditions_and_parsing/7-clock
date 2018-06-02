@@ -3,8 +3,8 @@
 hour=0
 while [ $hour -lt 24 ]; do
     echo Hour: $hour
-    minute=1
-    while [ $minute -lt 61 ]; do
+    minute=0
+    while [ $minute -lt 60 ]; do
 	echo $minute
 	((minute++))
     done
