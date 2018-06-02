@@ -2,6 +2,7 @@
 #output "Holberton School", except iterations 4 and 8
 i=0
 while [ $i -lt 10 ]; do
+    ((i++))
     if [ $i -eq 4 ]; then
 	echo bad luck
     elif [ $i -eq 8 ]; then
@@ -9,5 +10,4 @@ while [ $i -lt 10 ]; do
     else
 	echo Holberton School
     fi
-    ((i++))
 done
