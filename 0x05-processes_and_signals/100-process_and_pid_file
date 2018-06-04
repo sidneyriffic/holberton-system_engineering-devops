@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#more sigtrap handling exercises
+trap "rm holbertonscript.pid; exit" SIGQUIT
+trap "echo I hate the kill command; rm holbertonscript.pid; exit" SIGTERM
+trap "echo Y U no love me?!; exit" SIGINT
+echo $$ > holbertonscript.pid
+while true; do
+    echo To infinity and beyond
+    sleep 2
+done
