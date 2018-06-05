@@ -7,10 +7,12 @@ if [ "$1" == "start" ]; then
 elif [ "$1" == "stop" ]; then
     pkill -SIGTERM -f "./manage_my_process"
     rm /var/run/my_process.pid
+    rm /tmp/my_process
     echo "manage_my_process stopped"
 elif [ "$1" == "restart" ]; then
     pkill -SIGTERM -f "./manage_my_process"
     rm /var/run/my_process.pid
+    rm /tmp/my_process
     ./manage_my_process &
     echo $! > /var/run/my_process.pid
     echo "manage_my_process restarted"
