@@ -10,11 +10,11 @@
  */
 int infinite_while(void)
 {
-    while (1)
-    {
-        sleep(1);
-    }
-    return (0);
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
 
 /**
@@ -22,7 +22,7 @@ int infinite_while(void)
  *
  * Return: 0 if child process. parent should not return.
  */
-int main()
+int main(void)
 {
 	int pid, ct;
 
