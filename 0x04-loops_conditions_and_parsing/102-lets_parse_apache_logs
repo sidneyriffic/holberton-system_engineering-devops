@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #parses the given apache log file to ip and http code
-awk 'BEGIN {FS = "\"" } ; {print $1, $3}' apache-access.log | awk '{print $1, $6}'
+awk '{print $1, $9}' apache-access.log
