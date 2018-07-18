@@ -9,4 +9,5 @@ sudo sed -i "/http {/a\\
 	server_name 35.237.144.252;\n\
         rewrite \^\/redirect_me$ https://www.youtube.com/watch?v=QH2-TGUlwu4\
  permanent;\n}" /etc/nginx/nginx.conf
+sudo service nginx restart
 sudo nginx -s reload
