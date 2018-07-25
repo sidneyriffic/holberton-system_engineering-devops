@@ -1,1 +1,1 @@
-Basic bash scripting project
+###bash scripts, web servers and similar more system adminry projects are here.
