@@ -1,2 +1,0 @@
-#!/bash/bin
-mv [[:upper:]]* /tmp/u
