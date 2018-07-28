@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#install an nginx server and change index page to string "Holberton School"
+apt-get update
+sudo apt-get -y install nginx
+echo "Holberton School for the win!" |
+    sudo tee /usr/share/nginx/html/index.html
+sudo sed -i "/# Only for*/i\\
+     location /redirect_me {\n\
+     rewrite \^(.*)$ https://www.youtube.com/watch?v=QH2-TGUlwu4\
+ permanent;\n}\n\
+ error_page 404 \/404.html;\n\
+ add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
+sudo service nginx restart
