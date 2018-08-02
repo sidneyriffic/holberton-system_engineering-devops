@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 #execute whoami as the user passed as an argument
-su -c whoami "$1"
+if [ $# -eq 1 ]; then
+    su -c whoami "$1"
+fi
