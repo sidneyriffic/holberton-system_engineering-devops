@@ -4,7 +4,6 @@
 if __name__ == "__main__":
     import json
     import requests
-    import sys
 
     users = requests.get("http://jsonplaceholder.typicode.com/users").json()
     with open("todo_all_employees.json", "w") as jsonfile:
