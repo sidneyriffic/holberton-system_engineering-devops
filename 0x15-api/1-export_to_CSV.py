@@ -15,6 +15,6 @@ if __name__ == "__main__":
         username = user.get("username")
         userid = user.get("id")
         for task in todos:
-            csvfile.write('"{}","{}","{}","{}"\n'.format(userid, username, 
-                                                       task.get("completed"),
-                                                       task.get("title")))
+            csvfile.write('"{}","{}","{}","{}"\n'.format(userid, username,
+                                                         task.get("completed"),
+                                                         task.get("title")))
