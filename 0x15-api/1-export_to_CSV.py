@@ -13,7 +13,8 @@ if __name__ == "__main__":
                          + argv[1]).json()
 
     with open("USER_ID.csv", "w") as csvfile:
-        csvexport = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        csvexport = csv.writer(csvfile, quoting=csv.QUOTE_ALL,
+                               lineterminator='\n')
         username = user.get("username")
         userid = user.get("id")
         for task in todos:
