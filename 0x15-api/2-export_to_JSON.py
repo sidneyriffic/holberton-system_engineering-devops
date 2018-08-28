@@ -7,10 +7,10 @@ import sys
 
 
 if __name__ == "__main__":
-    user = requests.get("http://jsonplaceholder.typicode.com/users/"
-                        + sys.argv[1]).json()
-    todos = requests.get("http://jsonplaceholder.typicode.com/todos?userId="
-                         + sys.argv[1]).json()
+    user = requests.get("http://jsonplaceholder.typicode.com/users/" +
+                        sys.argv[1]).json()
+    todos = requests.get("http://jsonplaceholder.typicode.com/todos?userId=" +
+                         sys.argv[1]).json()
 
     userid = str(user.get("id"))
     with open(userid + ".json", "w") as jsonfile:
