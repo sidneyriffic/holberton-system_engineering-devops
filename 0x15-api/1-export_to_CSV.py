@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     with open("USER_ID.csv", "w") as csvfile:
         csvexport = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        username = user.get("name")
+        username = user.get("username")
         userid = user.get("id")
         for task in todos:
             csvexport.writerow([userid, username, task.get("completed"),
