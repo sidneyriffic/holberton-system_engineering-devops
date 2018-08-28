@@ -11,10 +11,11 @@ if __name__ == "__main__":
     todos = requests.get("http://jsonplaceholder.typicode.com/todos?userId="
                          + argv[1]).json()
 
-    with open("USER_ID.csv", "w") as csvfile:
+    userid = str(user.get("id"))
+    with open(userid + ".csv", "w") as csvfile:
         username = user.get("username")
         userid = user.get("id")
         for task in todos:
-            csvfile.write('"{}","{}","{}","{}"\n'.format(userid, username,
-                                                         task.get("completed"),
-                                                         task.get("title")))
+            csvfile.write('"{}","{}","{}","{}"\n'.
+                          format(userid, username, task.get("completed"),
+                                 task.get("title")))

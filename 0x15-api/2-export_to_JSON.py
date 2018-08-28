@@ -12,7 +12,8 @@ if __name__ == "__main__":
     todos = requests.get("http://jsonplaceholder.typicode.com/todos?userId="
                          + sys.argv[1]).json()
 
-    with open("USER_ID.json", "w") as jsonfile:
+    userid = str(user.get("id"))
+    with open(userid + ".json", "w") as jsonfile:
         username = user.get("username")
         userid = str(user.get("id"))
         tasklist = []
