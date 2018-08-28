@@ -5,12 +5,12 @@
 if __name__ == "__main__":
     import json
     import requests
-    from sys import argv
+    import sys
 
     user = requests.get("http://jsonplaceholder.typicode.com/users/"
-                        + argv[1]).json()
+                        + sys.argv[1]).json()
     todos = requests.get("http://jsonplaceholder.typicode.com/todos?userId="
-                         + argv[1]).json()
+                         + sys.argv[1]).json()
 
     with open("USER_ID.json", "w") as jsonfile:
         username = user.get("username")
