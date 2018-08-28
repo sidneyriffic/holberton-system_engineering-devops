@@ -14,6 +14,6 @@ if __name__ == "__main__":
                         + argv[1] + "&completed=true").json()
 
     print("Employee {} is done with tasks({}/{})"
-          .format(user["name"], len(done), len(todos)))
+          .format(user.get("name"), len(done), len(todos)))
     for task in done:
-        print("\t" + task["title"])
+        print("\t" + task.get("title"))
