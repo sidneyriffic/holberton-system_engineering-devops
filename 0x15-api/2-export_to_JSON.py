@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """Get information from the JSONplaceholder API"""
 
+import json
+import requests
+import sys
+
 
 if __name__ == "__main__":
-    import json
-    import requests
-    import sys
-
     user = requests.get("http://jsonplaceholder.typicode.com/users/"
                         + sys.argv[1]).json()
     todos = requests.get("http://jsonplaceholder.typicode.com/todos?userId="
