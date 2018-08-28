@@ -13,7 +13,7 @@ if __name__ == "__main__":
     done = requests.get("http://jsonplaceholder.typicode.com/todos?userId="
                         + argv[1] + "&completed=true").json()
 
-    print("Employee {} is done with tasks({}/{})"
+    print("Employee {} is done with tasks({}/{}):"
           .format(user.get("name"), len(done), len(todos)))
     for task in done:
         print("\t" + task.get("title"))
