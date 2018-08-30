@@ -12,6 +12,12 @@ def number_of_subscribers(subreddit):
 
     subredditinfo = requests.get("http://reddit.com/r/" + subreddit +
                                  "/about.json",
-                                 headers={"User-Agent": "APILearning"}).json()
+                                 headers={"User-Agent": "APILearning"})
 
-    return subredditinfo["data"]["subscribers"]
+    if subredditinfo.status_code != 200:
+        return 0
+    subredditinfo = subredditinfo.json()
+    if subredditinfo["kind"] == "t5":
+        return subredditinfo["data"]["subscribers"]
+    else:
+        return 0
